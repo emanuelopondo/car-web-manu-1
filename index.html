@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APEX | The Future of Performance</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header id="navbar">
+        <div class="logo">APEX<span>MOTORS</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#engineering">Engineering</a></li>
+                <li><a href="#gallery">Collection</a></li>
+                <li><a href="#specs">Specs</a></li>
+                <li><a href="#contact" class="cta-btn">Inquire Now</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Beyond <br> <span class="text-highlight">Velocity</span></h1>
+            <p>Experience the pinnacle of automotive engineering for 2026.</p>
+            
+            <div class="search-wrapper">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchBox" placeholder="Search models (e.g., Chiron, Revuelto)...">
+                <button onclick="searchFunction()">Discover</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="engineering" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Engineering Brief</h2>
+                <div class="divider"></div>
+                <p>Technical Analysis & Market Data</p>
+            </div>
+
+            <div class="grid-2-col">
+                <div class="tech-card">
+                    <h3><i class="fas fa-microchip"></i> System Highlights</h3>
+                    
+                    <div class="tech-item">
+                        <p><strong>The 2026 Bugatti Tourbillon is a V16 hybrid masterpiece.</strong></p>
+                        <p><em>The engine revs to an incredible 9,000 RPM.</em></p>
+                        <p><u>Top Speed: Electronically limited to 277 mph.</u></p>
+                    </div>
+
+                    <div class="tech-item">
+                        <h4>Logistics & Chemistry</h4>
+                        <p>Expected Delivery: June 15<sup>th</sup>, 2026</p>
+                        <p>Fuel Composition: C<sub>8</sub>H<sub>18</sub> (High Octane)</p>
+                    </div>
+
+                    <div class="tech-item">
+                        <h4>Market Analysis</h4>
+                        <p><strike>Original MSRP: $2,500,000</strike> <span class="sold-out">(Sold Out)</span></p>
+                        <p><mark>Current Valuation: $4,200,000</mark> (Appreciating)</p>
+                    </div>
+
+                    <div class="quote-box">
+                        <q>Aerodynamics are for people who can't build engines.</q> 
+                        <span class="author">- Enzo Ferrari</span>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <h3><i class="fas fa-cogs"></i> Performance Notes</h3>
+                    
+                    <blockquote>
+                        "Straight roads are for fast cars, turns are for fast drivers. The 2026 Porsche 911 GT3 RS proves this by dominating the Nürburgring."
+                    </blockquote>
+
+                    <div class="terminal-view">
+                        <pre>
+> SYSTEM CHECK INITIATED...
+> SUSPENSION GAP: ANALYZING...
+> RESULT: 4 INCHES [TRACK MODE]
+> AERO: ACTIVE
+                        </pre>
+                    </div>
+
+                    <div class="specs-divider">
+                        <span>Performance</span>
+                        <hr>
+                        <span>Interior</span>
+                        <hr>
+                        <span>Safety</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-3-col mt-50">
+                <div class="list-card">
+                    <h4>Top Manufacturers</h4>
+                    <ul>
+                        <li>Ferrari S.p.A.</li>
+                        <li>Automobili Lamborghini</li>
+                        <li>Porsche AG</li>
+                        <li>McLaren Automotive</li>
+                        <li>Aston Martin Lagonda</li>
+                    </ul>
+                </div>
+
+                <div class="list-card">
+                    <h4>Fastest Lap Times</h4>
+                    <ol>
+                        <li>Koenigsegg Jesko Absolut</li>
+                        <li>Bugatti Chiron Super Sport</li>
+                        <li>SSC Tuatara</li>
+                        <li>Hennessey Venom F5</li>
+                        <li>Rimac Nevera</li>
+                    </ol>
+                </div>
+
+                <div class="list-card">
+                    <h4>Powertrain Architecture</h4>
+                    <ul class="nested-list">
+                        <li>Internal Combustion
+                            <ul>
+                                <li>V8 Twin Turbo</li>
+                                <li>V12 Naturally Aspirated</li>
+                            </ul>
+                        </li>
+                        <li>Electric (EV)
+                            <ul>
+                                <li>Tri-Motor Plaid</li>
+                                <li>Solid State Battery</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="dark-bg section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Collection</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=600&q=80" alt="Ferrari">
+                    <div class="overlay">
+                        <h3>Ferrari 488</h3>
+                        <p>Track Focus</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=600&q=80" alt="Porsche">
+                    <div class="overlay">
+                        <h3>Porsche 911</h3>
+                        <p>Precision Tool</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1614200179396-2bdb77ebf81b?auto=format&fit=crop&w=600&q=80" alt="Tesla">
+                    <div class="overlay">
+                        <h3>Tesla Plaid</h3>
+                        <p>Electric Fury</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=600&q=80" alt="Audi">
+                    <div class="overlay">
+                        <h3>Audi R8</h3>
+                        <p>Daily Supercar</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=80" alt="Lamborghini">
+                    <div class="overlay">
+                        <h3>Lamborghini</h3>
+                        <p>Raging Bull</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=600&q=80" alt="McLaren">
+                    <div class="overlay">
+                        <h3>McLaren P1</h3>
+                        <p>Hyper Hybrid</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Media Showcase</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="video-grid">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/NCoV5nUVMQg" title="McLaren Review" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/m5_AKjDdqaU" title="Drag Race" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/qgYt7Zl1jks" title="V12 Sounds" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="specs" class="dark-bg section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical Specifications</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Make</th>
+                            <th>Model</th>
+                            <th>Year</th>
+                            <th>Engine</th>
+                            <th>HP</th>
+                            <th>0-60</th>
+                            <th>Top Speed</th>
+                            <th>Price</th>
+                            <th>Weight</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bugatti</td>
+                            <td>Tourbillon</td>
+                            <td>2026</td>
+                            <td>V16 Hybrid</td>
+                            <td>1775</td>
+                            <td>2.0s</td>
+                            <td>277 mph</td>
+                            <td>$4.2M</td>
+                            <td>1995kg</td>
+                            <td><span class="rating">10</span></td>
+                        </tr>
+                        <tr>
+                            <td>Ferrari</td>
+                            <td>SF90 XX</td>
+                            <td>2025</td>
+                            <td>V8 Hybrid</td>
+                            <td>1016</td>
+                            <td>2.3s</td>
+                            <td>211 mph</td>
+                            <td>$900k</td>
+                            <td>1560kg</td>
+                            <td><span class="rating">9.8</span></td>
+                        </tr>
+                        <tr>
+                            <td>Porsche</td>
+                            <td>911 GT3</td>
+                            <td>2026</td>
+                            <td>Flat-6</td>
+                            <td>518</td>
+                            <td>2.7s</td>
+                            <td>197 mph</td>
+                            <td>$220k</td>
+                            <td>1430kg</td>
+                            <td><span class="rating">9.9</span></td>
+                        </tr>
+                        <tr>
+                            <td>Tesla</td>
+                            <td>Roadster</td>
+                            <td>2026</td>
+                            <td>Tri-Motor</td>
+                            <td>1200+</td>
+                            <td>1.9s</td>
+                            <td>250+ mph</td>
+                            <td>$250k</td>
+                            <td>2000kg</td>
+                            <td><span class="rating">9.5</span></td>
+                        </tr>
+                        <tr>
+                            <td>Lamborghini</td>
+                            <td>Revuelto</td>
+                            <td>2025</td>
+                            <td>V12 Hybrid</td>
+                            <td>1001</td>
+                            <td>2.5s</td>
+                            <td>217 mph</td>
+                            <td>$600k</td>
+                            <td>1772kg</td>
+                            <td><span class="rating">9.7</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Acquire Your Machine</h2>
+                    <p>Our concierge team is available 24/7 for consultation.</p>
+                    
+                    <div class="info-item">
+                        <h4>HQ Location</h4>
+                        <p>123 Motorway Avenue, Nairobi, Kenya</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Direct Line</h4>
+                        <p>+254 700 123 456</p>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" required>
+                        <label>Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" required>
+                        <label>Email Address</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea required></textarea>
+                        <label>Inquiry Details</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">APEX<span>MOTORS</span></div>
+            <p>&copy; 2026 Ultimate Car World. All Rights Reserved.</p>
+            <div class="socials">
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
