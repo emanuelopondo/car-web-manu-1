@@ -509,19 +509,58 @@ footer {
 }
 .socials a:hover { color: white; }
 
+
 /* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 768px) {
-    .nav-links { display: none; } /* Hamburger logic needed for full mobile menu */
-    .grid-2-col, .contact-wrapper { grid-template-columns: 1fr; }
     .hero h1 { font-size: 2.5rem; }
-    
-    /* Simple mobile nav fix for demo */
-    .hamburger { display: block; cursor: pointer; }
-    .hamburger .line { width: 25px; height: 3px; background: white; margin: 5px; }
-}
-@media (min-width: 769px) { .hamburger { display: none; } }
+    .grid-2-col, .contact-wrapper { grid-template-columns: 1fr; }
 
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
+    /* Hamburger Icon Visuals */
+    .hamburger { 
+        display: block; 
+        cursor: pointer; 
+        z-index: 1001; /* Ensure it sits on top */
+    }
+    .hamburger .line { 
+        width: 25px; 
+        height: 3px; 
+        background: white; 
+        margin: 5px; 
+        transition: all 0.3s ease; 
+    }
+
+    /* Mobile Menu - Hidden by Default */
+    .nav-links {
+        display: none; /* Hidden initially */
+        position: absolute;
+        top: 70px; /* Push it below the navbar */
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 10, 0.98); /* Dark background */
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+        border-bottom: 1px solid #333;
+    }
+
+    /* The Class JS will add to show the menu */
+    .nav-links.active {
+        display: flex;
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
+
+@media (min-width: 769px) { 
+    .hamburger { display: none; } 
+    .nav-links { display: flex !important; } /* Ensure menu is always visible on desktop */
+}
+
+/* Simple Slide Down Animation */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
 }

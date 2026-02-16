@@ -39,3 +39,18 @@ inputs.forEach(input => {
         }
     });
 });
+
+// --- MOBILE MENU TOGGLE ---
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        // Toggle the .active class on the menu
+        navLinks.classList.toggle('active');
+        
+        // Optional: Animate the hamburger icon (turn into X)
+        // You can add styles for .toggle .line later if you want
+        hamburger.classList.toggle('toggle');
+    });
+}
