@@ -54,3 +54,16 @@ if (hamburger) {
         hamburger.classList.toggle('toggle');
     });
 }
+
+// --- CLOSE MENU ON CLICK ---
+// Select all links inside the mobile menu
+const menuLinks = document.querySelectorAll('.nav-links li a');
+
+// Add a click event to every link
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        // When a link is clicked, remove the 'active' class
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.remove('active');
+    });
+});
