@@ -63,7 +63,7 @@
             color: var(--primary-color);
         }
 
-        .assignment-link .link-number {
+        .link-number {
             font-size: 0.75rem;
             color: #333;
             font-weight: 900;
@@ -71,130 +71,7 @@
             flex-shrink: 0;
         }
 
-        .assignment-link .link-title {
-            flex: 1;
-        }
+        .link-title { flex: 1; }
 
-        .assignment-link .link-arrow {
-            color: var(--primary-color);
-            font-size: 1rem;
-            transition: transform 0.3s;
-        }
-
-        .assignment-link:hover .link-arrow {
-            transform: translateX(5px);
-        }
-
-        .back-link {
-            display: inline-flex; align-items: center; gap: 8px;
-            color: var(--text-muted); text-decoration: none; font-size: 0.85rem;
-            text-transform: uppercase; letter-spacing: 1px;
-            margin-bottom: 20px; transition: color 0.3s;
-        }
-        .back-link:hover { color: white; }
-
-        @media (max-width: 768px) {
-            .assignments-hero h1 { font-size: 2rem; }
-            .assignment-link { padding: 20px 25px; font-size: 0.85rem; }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- NAVBAR -->
-    <header id="navbar">
-        <div class="logo">APEX<span>MOTORS</span></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#engineering">Engineering</a></li>
-                <li><a href="index.html#gallery">Collection</a></li>
-                <li><a href="index.html#specs">Specs</a></li>
-                <li><a href="index.html#contact" class="cta-btn">Inquire Now</a></li>
-                <li class="dropdown">
-                    <a href="assignments.html" class="cta-btn" style="background: var(--primary-color);">Assignments ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#assignment1">Assignment 1 — HTML</a></li>
-                        <li><a href="#assignment2">Assignment 2 — CSS</a></li>
-                        <li><a href="#assignment3">Assignment 3 — JavaScript</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- PAGE HERO -->
-    <div class="assignments-hero">
-        <h1>My <span>Assignments</span></h1>
-        <p>Web Development Portfolio &mdash; APEX Motors Project</p>
-    </div>
-
-    <!-- ASSIGNMENTS LIST -->
-    <section class="section-padding">
-        <div class="container">
-
-            <a href="index.html" class="back-link">
-                <i class="fas fa-arrow-left"></i> Back to Main Site
-            </a>
-
-            <div class="section-header">
-                <h2>My Assignments</h2>
-                <div class="divider"></div>
-                <p>Click to open each assignment</p>
-            </div>
-
-            <div class="assignments-list">
-
-                <!-- ASSIGNMENT 1 — replace href="#" with your actual link -->
-                <a class="assignment-link" id="assignment1" href="#" target="_blank">
-                    <span class="link-number">01</span>
-                    <span class="link-title">CSS Task One</span>
-                    <i class="fas fa-arrow-right link-arrow"></i>
-                </a>
-
-                <!-- ASSIGNMENT 2 — replace href="#" with your actual link -->
-                <a class="assignment-link" id="assignment2" href="#" target="_blank">
-                    <span class="link-number">02</span>
-                    <span class="link-title">Classes and IDs</span>
-                    <i class="fas fa-arrow-right link-arrow"></i>
-                </a>
-
-                <!-- ASSIGNMENT 3 — replace href="#" with your actual link -->
-                <a class="assignment-link" id="assignment3" href="#" target="_blank">
-                    <span class="link-number">03</span>
-                    <span class="link-title">Assignment Three</span>
-                    <i class="fas fa-arrow-right link-arrow"></i>
-                </a>
-
-                <!-- ASSIGNMENT 4 — replace href="#" with your actual link -->
-                <a class="assignment-link" id="assignment4" href="#" target="_blank">
-                    <span class="link-number">04</span>
-                    <span class="link-title">Assignment Four</span>
-                    <i class="fas fa-arrow-right link-arrow"></i>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">APEX<span>MOTORS</span></div>
-            <p>&copy; 2026 Ultimate Car World. All Rights Reserved.</p>
-            <div class="socials">
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-                <a href="#">YouTube</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        .link-arrow {
+            color: var​​​​​​​​​​​​​​​​
