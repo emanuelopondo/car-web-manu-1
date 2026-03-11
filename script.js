@@ -13,10 +13,7 @@ window.addEventListener('scroll', function() {
 // Search Functionality
 function searchFunction() {
     let input = document.getElementById("searchBox").value.toLowerCase();
-    
     if (input.includes("ferrari") || input.includes("lamborghini") || input.includes("porsche") || input.includes("bugatti")) {
-        // In a real app, this would filter results.
-        // For the demo, we show a professional interaction.
         alert(`ACCESSING ARCHIVES... \nLoading specifications for: ${input.toUpperCase()}`);
         document.getElementById('specs').scrollIntoView();
     } else if (input.trim() !== "") {
@@ -26,44 +23,30 @@ function searchFunction() {
     }
 }
 
-// Optional: Simple Form Animation for labels (handled in CSS mostly)
+// Form label animation
 const inputs = document.querySelectorAll('.form-group input, .form-group textarea');
-
 inputs.forEach(input => {
-    input.addEventListener('focus', () => {
-        input.parentElement.classList.add('active');
-    });
+    input.addEventListener('focus', () => { input.parentElement.classList.add('active'); });
     input.addEventListener('blur', () => {
-        if(input.value === "") {
-            input.parentElement.classList.remove('active');
-        }
+        if (input.value === "") { input.parentElement.classList.remove('active'); }
     });
 });
 
-// --- MOBILE MENU TOGGLE ---
+// Mobile Menu Toggle
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 if (hamburger) {
     hamburger.addEventListener('click', () => {
-        // Toggle the .active class on the menu
         navLinks.classList.toggle('active');
-        
-        // Optional: Animate the hamburger icon (turn into X)
-        // You can add styles for .toggle .line later if you want
         hamburger.classList.toggle('toggle');
     });
 }
 
-// --- CLOSE MENU ON CLICK ---
-// Select all links inside the mobile menu
+// Close menu when a link is clicked
 const menuLinks = document.querySelectorAll('.nav-links li a');
-
-// Add a click event to every link
 menuLinks.forEach(link => {
     link.addEventListener('click', () => {
-        // When a link is clicked, remove the 'active' class
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.remove('active');
+        document.querySelector('.nav-links').classList.remove('active');
     });
 });
