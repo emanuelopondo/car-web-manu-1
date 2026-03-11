@@ -1,4 +1,4 @@
-// Toggle Mobile Menu
+// Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
@@ -8,19 +8,19 @@ if (hamburger) {
     });
 }
 
-// Close menu on link click
+// Close mobile menu when clicking a link
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
     });
 });
 
-// Search functionality
+// Simple Search Alert
 function searchFunction() {
-    let input = document.getElementById("searchBox").value.toLowerCase();
-    if (input.trim() !== "") {
-        alert("SEARCHING DATABASE for: " + input.toUpperCase());
+    const input = document.getElementById("searchBox").value;
+    if (input) {
+        alert("ACCESSING ARCHIVES FOR: " + input.toUpperCase());
     } else {
-        alert("SYSTEM ERROR: Please enter a model name.");
+        alert("PLEASE ENTER A MODEL TO DISCOVER.");
     }
 }
