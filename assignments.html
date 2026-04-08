@@ -4,74 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APEX | Assignments</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        .assignments-hero {
-            padding: 180px 0 80px;
-            text-align: center;
-            background: linear-gradient(to bottom, #0d0d0d, var(--dark-bg));
-            border-bottom: 1px solid #1a1a1a;
-        }
-        .assignments-hero h1 { font-size: 3rem; text-transform: uppercase; letter-spacing: 4px; }
-        .assignments-hero h1 span { color: var(--primary-color); }
-        .assignments-hero p { color: var(--text-muted); margin-top: 15px; font-size: 1rem; letter-spacing: 1px; }
+</head>
+<body>
+    <header id="navbar">
+        <div class="logo">APEX<span>MOTORS</span></div>
+        <nav><ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="engineering.html">Engineering</a></li>
+            <li><a href="collection.html">Collection</a></li>
+            <li><a href="specs.html">Specs</a></li>
+            <li><a href="assignments.html" class="cta-btn" style="background: var(--primary-color);">Assignments</a></li>
+        </ul></nav>
+    </header>
 
-        .assignments-list {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            max-width: 700px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
+    <section class="assignments-hero">
+        <h1>Course <span>Assignments</span></h1>
+        <p>DICT 121: Web Development & SEO Research</p>
+    </section>
 
-        .assignment-link {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 25px 35px;
-            background: var(--card-bg);
-            border: 1px solid #222;
-            border-radius: 12px;
-            text-decoration: none;
-            color: white;
-            font-family: var(--font-heading);
-            font-size: 1rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: relative;
-            overflow: hidden;
-            transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
-        }
+    <div class="container section-padding">
+        <div class="tech-card">
+            <h3>Assignment 1: SEO Tools</h3>
+            <p>This project researches <strong>AI-driven SEO</strong> strategies for 2026.</p>
+            <ul class="nested-list">
+                <li><strong>Content Creation</strong>
+                    <ul>
+                        <li>Jasper AI - Technical Writing</li>
+                        <li>Copy.ai - Marketing Content</li>
+                    </ul>
+                </li>
+                <li><strong>Analytics Tools</strong>
+                    <ul>
+                        <li>SurferSEO - Keyword Density</li>
+                        <li>Ahrefs - Backlink Audit</li>
+                        <li>Google Search Console</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-        .assignment-link::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--primary-color);
-        }
-
-        .assignment-link:hover {
-            border-color: var(--primary-color);
-            transform: translateX(6px);
-            background: #1a1a1a;
-            color: var(--primary-color);
-        }
-
-        .link-number {
-            font-size: 0.75rem;
-            color: #333;
-            font-weight: 900;
-            margin-right: 20px;
-            flex-shrink: 0;
-        }
-
-        .link-title { flex: 1; }
-
-        .link-arrow {
-            color: var​​​​​​​​​​​​​​​​
+        <div class="tech-card mt-50">
+            <h3>Assignment 2: Submission Schedule</h3>
+            <table class="data-table">
+                <thead><tr><th>Task</th><th>Topic</th><th>Deadline</th><th>Grade</th></tr></thead>
+                <tbody>
+                    <tr><td>CAT 1</td><td>HTML Semantics</td><td>March</td><td><span class="rating">95%</span></td></tr>
+                    <tr><td>CAT 2</td><td>CSS Grid Layouts</td><td>April</td><td><span class="rating">98%</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
