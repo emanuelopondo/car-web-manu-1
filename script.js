@@ -50,15 +50,3 @@ menuLinks.forEach(link => {
         document.querySelector('.nav-links').classList.remove('active');
     });
 });
-
-// Mobile Dropdown Toggle
-const dropdownTriggers = document.querySelectorAll('.dropdown > a');
-dropdownTriggers.forEach(trigger => {
-    trigger.addEventListener('click', function(e) {
-        const parent = this.parentElement;
-        if (window.innerWidth <= 768) {
-            e.preventDefault();
-            parent.classList.toggle('open');
-        }
-    });
-});
