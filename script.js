@@ -1,30 +1,52 @@
-// Keep original flow - Search functionality updated for client-facing Performance Lab
+// Change Navbar style on scroll
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.style.background = 'rgba(10, 10, 10, 0.98)';
+        header.style.padding = '15px 50px';
+    } else {
+        header.style.background = 'rgba(10, 10, 10, 0.9)';
+        header.style.padding = '20px 50px';
+    }
+});
+
+// Search Functionality
 function searchFunction() {
-    const input = document.getElementById('searchBox').value.toUpperCase();
-    
-    // Redirects to Lab section if keywords are found
-    if (input.includes("LAB") || input.includes("TUNING") || input.includes("PERFORMANCE")) {
-        window.location.href = "#performance-lab";
-    } else if (input.includes("CONTACT") || input.includes("INQUIRE")) {
-        window.location.href = "#contact";
-    } else if (input) {
-        alert("Analyzing APEX technical specifications for: " + input);
+    let input = document.getElementById("searchBox").value.toLowerCase();
+    if (input.includes("ferrari") || input.includes("lamborghini") || input.includes("porsche") || input.includes("bugatti")) {
+        alert(`ACCESSING ARCHIVES... \nLoading specifications for: ${input.toUpperCase()}`);
+        document.getElementById('specs').scrollIntoView();
+    } else if (input.trim() !== "") {
+        alert("SEARCHING DATABASE... \nPlease wait while we query global inventory.");
+    } else {
+        alert("SYSTEM ERROR: Input required to initiate search protocol.");
     }
 }
 
-// Keep original Hamburger logic exactly as first sent
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
+// Form label animation
+const inputs = document.querySelectorAll('.form-group input, .form-group textarea');
+inputs.forEach(input => {
+    input.addEventListener('focus', () => { input.parentElement.classList.add('active'); });
+    input.addEventListener('blur', () => {
+        if (input.value === "") { input.parentElement.classList.remove('active'); }
+    });
+});
+
+// Mobile Menu Toggle
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
 if (hamburger) {
-    hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('toggle');
     });
 }
 
-// Ensure navbar links close the mobile menu when clicked
-document.querySelectorAll('.nav-links a').forEach(link => {
+// Close menu when a nav link is clicked
+const menuLinks = document.querySelectorAll('.nav-links li a');
+menuLinks.forEach(link => {
     link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+        document.querySelector('.nav-links').classList.remove('active');
     });
 });
