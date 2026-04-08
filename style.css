@@ -88,32 +88,64 @@ header {
 }
 .search-wrapper button:hover { background: #c0392b; }
 
-/* --- ENGINEERING, GALLERY, TABLE, CONTACT sections removed for brevity but are identical to your original --- */
-/* (Insert your original CSS for .grid-2-col, .tech-card, .gallery-item, .data-table, .contact-form, etc. here) */
+/* --- ENGINEERING & LAB --- */
+.grid-2-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.grid-3-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+.tech-card, .list-card {
+    background: var(--card-bg); padding: 30px;
+    border: 1px solid #333; border-radius: 10px;
+}
+.tech-item { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #222; }
+.tech-item h4 { color: var(--primary-color); margin-bottom: 10px; font-size: 0.9rem; text-transform: uppercase; }
+
+.quote-box {
+    border-left: 4px solid var(--primary-color); padding-left: 20px;
+    margin-top: 20px; font-style: italic; color: #ccc;
+}
+.quote-box .author { display: block; margin-top: 10px; font-weight: bold; color: white; font-style: normal; }
+
+blockquote { background: #222; padding: 20px; border-radius: 5px; margin-bottom: 20px; font-family: serif; font-style: italic; }
+
+.terminal-view pre {
+    background: #000; color: #0f0; padding: 15px; border-radius: 5px;
+    font-family: 'Courier New', monospace; font-size: 0.85rem;
+    border: 1px solid #333; white-space: pre-wrap;
+}
+
+/* --- GALLERY --- */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 20px; }
+.gallery-item { position: relative; height: 250px; overflow: hidden; border-radius: 10px; cursor: pointer; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.gallery-item:hover img { transform: scale(1.1); }
+.overlay {
+    position: absolute; bottom: 0; left: 0; width: 100%;
+    background: linear-gradient(to top, black, transparent);
+    padding: 20px; transform: translateY(100%); transition: transform 0.3s ease;
+}
+.gallery-item:hover .overlay { transform: translateY(0); }
+
+/* --- TABLE --- */
+.dark-bg { background: #0e0e0e; }
+.table-responsive { overflow-x: auto; }
+.data-table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 10px; overflow: hidden; }
+.data-table th, .data-table td { padding: 15px 20px; text-align: left; border-bottom: 1px solid #222; }
+.data-table th { background: #1a1a1a; color: var(--primary-color); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+.rating { background: var(--primary-color); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
 
 /* --- MOBILE --- */
 @media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    .grid-2-col, .contact-wrapper { grid-template-columns: 1fr; }
-
     .hamburger { display: block; cursor: pointer; z-index: 1001; }
     .hamburger .line { width: 25px; height: 3px; background: white; margin: 5px; transition: all 0.3s ease; }
-
     .nav-links {
         display: none; position: absolute; top: 70px; left: 0; width: 100%;
         background: rgba(10, 10, 10, 0.98); flex-direction: column;
-        align-items: center; padding: 30px 0; border-bottom: 1px solid #333;
+        align-items: center; padding: 30px 0;
     }
-    .nav-links.active { display: flex; animation: slideDown 0.3s ease forwards; }
-    .nav-links li { margin: 15px 0; }
+    .nav-links.active { display: flex; }
 }
 
-@media (min-width: 769px) {
-    .hamburger { display: none; }
-    .nav-links { display: flex !important; }
-}
-
-/* --- ANIMATIONS (Restored Original) --- */
+/* --- ANIMATIONS (Original Flow) --- */
 @keyframes slideDown {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
