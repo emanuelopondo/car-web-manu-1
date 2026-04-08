@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APEX | The Future of Performance</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>APEX MOTORS | The Single Page Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
     <header id="navbar">
         <div class="logo">APEX<span>MOTORS</span></div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="engineering.html">Engineering</a></li>
-                <li><a href="collection.html">Collection</a></li>
-                <li><a href="specs.html">Specs</a></li>
-                <li><a href="assignments.html" class="cta-btn" style="background: var(--primary-color);">Assignments</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#engineering">Engineering</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#specs">Specs</a></li>
+                <li><a href="#assignments" class="cta-btn">Assignments</a></li>
             </ul>
             <div class="hamburger">
                 <div class="line"></div><div class="line"></div><div class="line"></div>
@@ -26,33 +26,92 @@
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Beyond <br> <span class="text-highlight">Velocity</span></h1>
-            <p>Experience the pinnacle of automotive engineering for 2026.</p>
+        <div class="container hero-content">
+            <h1>Humanizing <span>Horsepower</span></h1>
+            <p>APEX MOTORS is a student's tribute to the art of speed. Every line of code here mirrors the precision of a V16 engine.</p>
             <div class="search-wrapper">
-                <i class="fas fa-search"></i>
-                <input type="text" id="searchBox" placeholder="Search models...">
-                <button onclick="searchFunction()">Discover</button>
+                <input type="text" id="searchBox" placeholder="Search the APEX database...">
+                <button onclick="searchFunction()">Query</button>
             </div>
         </div>
     </section>
 
-    <section class="section-padding">
+    <section id="engineering" class="section-padding container">
+        <div class="grid-2-col">
+            <div class="tech-card">
+                <h3>The Workshop Soul</h3>
+                <p>We believe engineering isn't just about math; it's about the <strong>human connection</strong> to the machine. At APEX, we focus on how aerodynamics feel at 400km/h.</p>
+                <div class="quote-box">
+                    <q>To build a car that speaks to the soul—that is the true goal.</q>
+                </div>
+            </div>
+            <div class="tech-card">
+                <h3>Blueprint Accuracy</h3>
+                <p>Our 2026 tech stack utilizes <u>Computational Fluid Dynamics</u> to ensure every curve on an APEX model serves a functional purpose.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="collection" class="section-padding dark-bg">
         <div class="container">
-            <div class="assignment-centered-box">
-                <h2>The APEX Standard</h2>
-                <p>We curate the most accurate specifications for the world's elite performance vehicles. Every hypercar featured represents the absolute pinnacle of engineering.</p>
+            <h2>The <span>Curated</span> Gallery</h2>
+            <div class="video-grid">
+                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/NCoV5nUVMQg"></iframe></div>
+                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/m5_AKjDdqaU"></iframe></div>
+                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/ScMzIvxBSi4"></iframe></div>
+                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/7Azr80f7uU8"></iframe></div>
+                <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/S75Zf8_Y6K0"></iframe></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="specs" class="section-padding container">
+        <h3>Performance Data Sheet</h3>
+        <div class="table-wrapper">
+            <table class="data-table">
+                <thead>
+                    <tr><th>Model Name</th><th>Powertrain</th><th>0-100 km/h</th><th>Top Speed</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>APEX Veneno</td><td>V12 Quad-Turbo</td><td>2.4s</td><td>355 km/h</td></tr>
+                    <tr><td>APEX Electra</td><td>Triple Motor EV</td><td>1.9s</td><td>320 km/h</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="assignments" class="section-padding container">
+        <div class="tech-card">
+            <h3>DICT 121 Portfolio</h3>
+            <p>This project documents my journey from classroom theory to web development. I've integrated <strong>SEO research</strong> and <strong>Responsive Design</strong> into one unified experience.</p>
+            
+            <ul class="nested-list">
+                <li><strong>Research Tools</strong>
+                    <ul>
+                        <li>Jasper AI & Copy.ai - Content Gen</li>
+                        <li>SurferSEO - Keyword Density</li>
+                        <li>Ahrefs - Backlink Analysis</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="table-wrapper mt-50">
+                <h4>Submission Schedule</h4>
+                <table class="data-table">
+                    <thead><tr><th>Unit</th><th>Topic</th><th>Deadline</th><th>Status</th></tr></thead>
+                    <tbody>
+                        <tr><td>DICT 121</td><td>HTML Semantics</td><td>March 2026</td><td><span class="rating">Passed</span></td></tr>
+                        <tr><td>DICT 122</td><td>CSS Grid Layouts</td><td>April 2026</td><td><span class="rating">Active</span></td></tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">APEX<span>MOTORS</span></div>
-            <p>&copy; 2026 Ultimate Car World. All Rights Reserved.</p>
-        </div>
+        <p>&copy; 2026 APEX MOTORS | Student Project by Emanuel Opondo</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
